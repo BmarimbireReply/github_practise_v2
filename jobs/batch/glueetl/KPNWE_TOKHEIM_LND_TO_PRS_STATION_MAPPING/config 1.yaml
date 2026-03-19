@@ -1,0 +1,3 @@
+Connectors:
+- rdh-kpnwe-connector
+Role: IAM-kpnwe-tmsGlueETLProcessingJobsRole
