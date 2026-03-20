@@ -145,7 +145,17 @@ def transform_data(dyf: DynamicFrame) -> DataFrame:
 # -----------------------------------------------------------------------------
 
 def deduplicate_latest(df: DataFrame) -> DataFrame:
+    """ 
+    Deduplicate the DataFrame to keep only the latest record 
+    for each unique combination of tokheim_id_company_station and sap_station_number
+      based on ingest year, month, and day.
+      
+    Args:
+        df (DataFrame): The input Spark DataFrame to deduplicate.
 
+    Returns:    DataFrame: A deduplicated Spark DataFrame containing only the latest records 
+    for each unique combination of tokheim_id_company_station and sap_station_number.
+    """
     window_spec = Window.partitionBy(
         "tokheim_id_company_station",
         "sap_station_number"
