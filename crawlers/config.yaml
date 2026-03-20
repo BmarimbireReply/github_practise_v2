@@ -1,0 +1,6 @@
+  landing_kpnwe_tokheim_station_mapping_crawler:
+    RecrawlBehavior: CRAWL_EVERYTHING
+    TablePrefix: table-
+    Targets:
+      S3:
+      - s3-kpi-dataplatform-${env}-landing-kpnwe-retail/database/tokheim/station_mapping/
