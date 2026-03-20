@@ -1,0 +1,3 @@
+Role: IAM-kpnwe-nexxtmoveGlueETLProcessingJobsRole
+Connectors:
+- rdh-kpnwe-connector
